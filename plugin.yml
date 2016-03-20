@@ -1,0 +1,22 @@
+name: alertCMD
+main: nl.duncte123.dhg.Dhg
+version: 1.0.0
+author: duncte123
+description: >
+              this is a alert plugin
+commands:
+  alert:
+    description: the main command
+    aliases: [bc,broadcast,bcast]
+    
+permissions:
+  alertCMD.*:
+    default: op
+    description: all the alertCMD permissions
+    children:
+      alertCMD.send:
+        default: op
+        description: required for broadcasting a message
+      alertCMD.reload:
+        default: op
+        description: reloads the config

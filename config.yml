@@ -1,0 +1,7 @@
+#config file for alertCMD by duncte123
+
+#this is the prefix 
+prefix: '&f[&cALERT&f]'
+
+#DON'T change the version or the plugin will crash
+version: 1.0.0
