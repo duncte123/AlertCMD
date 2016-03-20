@@ -24,7 +24,7 @@ public class DhgCmd implements CommandExecutor {
 			// sender.sendMessage(ChatColor.DARK_RED + "you must be a player to
 			// do this");
 			if (args.length == 0) {
-				sender.sendMessage(ChatColor.DARK_RED + "/alert <message> or /alert reload");
+				sender.sendMessage(ChatColor.DARK_RED + "/" + commandLabel + " <message> or /" + commandLabel + " reload");
 			} else if (args.length == 1) {
 				if (args[0].equalsIgnoreCase("reload")) {
 					plugin.reloadConfig();
@@ -51,7 +51,7 @@ public class DhgCmd implements CommandExecutor {
 		Player player = (Player) sender;
 		if (player.isOp() || player.hasPermission(new Permission("alertCMD.send"))) {
 			if (args.length == 0) {
-				player.sendMessage(ChatColor.DARK_RED + "/alert <message> or /alert reload");
+				player.sendMessage(ChatColor.DARK_RED + "/" + commandLabel + " <message> or /" + commandLabel + " reload");
 			} else if (args.length == 1) {
 				if (args[0].equalsIgnoreCase("reload")) {
 					plugin.reloadConfig();
