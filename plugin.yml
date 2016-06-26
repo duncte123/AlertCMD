@@ -1,13 +1,13 @@
 name: alertCMD
 main: nl.duncte123.dhg.Dhg
-version: 1.0.0
+version: 1.1.0
 author: duncte123
 description: >
-              this is a alert plugin
+              this is a simple alert plugin
 commands:
-  alert:
+  broadcast:
     description: the main command
-    aliases: [bc,broadcast,bcast]
+    aliases: [bc,bcast]
     
 permissions:
   alertCMD.*:

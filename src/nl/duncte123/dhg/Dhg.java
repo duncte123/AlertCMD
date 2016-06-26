@@ -203,6 +203,7 @@ public class Dhg extends JavaPlugin {
 
 	public void onDisable() {
 		Logger.info(pdfFile.getName() + " Has Been Disabled!");
+		Bukkit.getServer().getScheduler().cancelTasks(this);
 	}
 
 	public void onEnable() {
@@ -219,7 +220,7 @@ public class Dhg extends JavaPlugin {
 	}
 
 	public void RegisterCommands() {
-		getCommand("alert").setExecutor(new DhgCmd(this));
+		getCommand("broadcast").setExecutor(new DhgCmd(this));
 	}
 
 	public void updater() {
