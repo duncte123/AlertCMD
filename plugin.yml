@@ -1,6 +1,6 @@
 name: alertCMD
 main: nl.duncte123.dhg.Dhg
-version: 1.1.0
+version: 1.2.0
 author: duncte123
 description: >
               this is a simple alert plugin
@@ -8,6 +8,8 @@ commands:
   broadcast:
     description: the main command
     aliases: [bc,bcast]
+  alert:
+    description: this command is only used if useAlertCmd is set to true in the config
     
 permissions:
   alertCMD.*:

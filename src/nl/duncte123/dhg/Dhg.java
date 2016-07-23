@@ -182,6 +182,7 @@ import java.util.logging.Logger;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -204,23 +205,33 @@ public class Dhg extends JavaPlugin {
 	public void onDisable() {
 		Logger.info(pdfFile.getName() + " Has Been Disabled!");
 		Bukkit.getServer().getScheduler().cancelTasks(this);
+		Bukkit.getServer().getScheduler().cancelAllTasks();
+		HandlerList.unregisterAll(this);
 	}
 
 	public void onEnable() {
-		RegisterCommands();
 		saveDefaultConfig();
+		RegisterCommands();
+		
 		Logger.info(pdfFile.getName() + " Version " + pdfFile.getVersion() + " Has Been Enabled!");
 		getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable() {
 
 			public void run() {
 				updater();
+				
+				saveDefaultConfig();
 				configFile();
+				
+				RegisterCommands();
 			}
 		}, 20);
 	}
 
 	public void RegisterCommands() {
 		getCommand("broadcast").setExecutor(new DhgCmd(this));
+		if(this.config.getBoolean("useAlertCmd")){
+			getCommand("alert").setExecutor(new DhgCmd(this));
+		}
 	}
 
 	public void updater() {

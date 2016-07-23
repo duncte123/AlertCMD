@@ -1,7 +1,11 @@
 #config file for alertCMD by duncte123
 
-#this is the prefix 
+#this is the prefix of the plugin, it uses the essentials colour sceme.
 prefix: '&f[&cALERT&f]'
 
 #DON'T change the version or the plugin will crash
-version: 1.1.0
+version: 1.2.0
+
+# change this to true to use the old /alert command
+# if you are using bungeecord or some oter proxy that uses the /alert command leave this on false
+useAlertCmd: false
