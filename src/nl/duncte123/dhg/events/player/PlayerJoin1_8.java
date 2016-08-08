@@ -26,7 +26,7 @@ public class PlayerJoin1_8 implements Listener {
 			Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
 				public void run() {
 					player.sendMessage(plugin.config.getString("prefix") + ChatColor.RED + "Hey you a new version of customcraft is available, you can now download version " + Dhg.version + "! " + "yours " + plugin.pdfFile.getVersion());
-					player.sendMessage(ChatColor.GREEN + "Click on the link to get it: " + ChatColor.BLUE + ChatColor.ITALIC + Dhg.updateChecker.getLink());
+					player.sendMessage(ChatColor.GREEN + "Click on the link to get it: " + ChatColor.BLUE + ChatColor.ITALIC + Dhg.url);
 				}
 			}, 200);
 

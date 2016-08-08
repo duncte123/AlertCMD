@@ -36,9 +36,9 @@ public class PlayerJoin1_9 implements Listener {
 					// to get it: " + ChatColor.BLUE + ChatColor.ITALIC +
 					// Customcraft.updateChecker.getLink());
 					IChatBaseComponent comp = ChatSerializer.a("{\"text\":\"" + "Click on the link to get it: "
-							+ "\",\"color\": \"green\",\"extra\":[{\"text\":\"" + Dhg.updateChecker.getLink()
+							+ "\",\"color\": \"green\",\"extra\":[{\"text\":\"" + Dhg.url
 							+ "\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\""
-							+ Dhg.updateChecker.getLink() + "\"},\"color\": \"blue\", \"italic\": \"true\"}]}");
+							+ Dhg.url + "\"},\"color\": \"blue\", \"italic\": \"true\"}]}");
 
 					PacketPlayOutChat packet = new PacketPlayOutChat(comp);
 					((CraftPlayer) player).getHandle().playerConnection.sendPacket(packet);
