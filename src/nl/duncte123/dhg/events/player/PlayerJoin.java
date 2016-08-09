@@ -43,7 +43,8 @@ public class PlayerJoin implements Listener {
 			Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
 				public void run() {
 					player.sendMessage("[AlertCMD] " + ChatColor.RED + "Hey you a new version of AlertCMD is available, you can now download version " + Dhg.version + "! " + " yours " + plugin.pdfFile.getVersion());
-					player.sendMessage("[AlertCMD] " + ChatColor.GREEN + "Click on the link to get it: " + ChatColor.BLUE + ChatColor.ITALIC + Dhg.url);
+					// player.sendMessage("[AlertCMD] " + ChatColor.GREEN + "Click on the link to get it: " + ChatColor.BLUE + ChatColor.ITALIC + Dhg.url);
+					player.sendMessage("[AlertCMD] " + ChatColor.GREEN + "Click on the link to get it: " + ChatColor.BLUE + ChatColor.ITALIC + "http://dev.bukkit.org/bukkit-plugins/alertcmd");
 				}
 			}, 200);
 

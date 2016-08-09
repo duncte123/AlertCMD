@@ -1,6 +1,6 @@
 name: alertCMD
 main: nl.duncte123.dhg.Dhg
-version: 1.3.0
+version: 1.3.1
 author: duncte123
 description: >
               this is a simple alert plugin

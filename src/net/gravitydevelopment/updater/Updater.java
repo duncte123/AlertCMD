@@ -32,6 +32,12 @@ import org.json.simple.JSONValue;
  * @author Gravity
  * @version 2.3
  */
+/**
+ * Bukkit.org update checker
+ * Source:
+ * https://github.com/gravitylow/ServerModsAPI-Example/blob/master/Update.java
+ * License: free
+ */
 
 public class Updater {
 

@@ -91,7 +91,8 @@ public class Dhg extends JavaPlugin {
 			Logger.info("");
 			Logger.info("#################################################################");
 			Logger.info("A new version is available: " + version + " yours " + pdfFile.getVersion());
-			Logger.info("You can get it from: " + updater.getLatestFileLink());
+			//Logger.info("You can get it from: " + updater.getLatestFileLink());
+			Logger.info("You can get it from:  http://dev.bukkit.org/bukkit-plugins/alertcmd");
 			Logger.info("#################################################################");
 			Logger.info("");
 			playerdone();
